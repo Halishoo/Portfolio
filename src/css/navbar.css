@@ -1,0 +1,49 @@
+.navbar
+{
+	width: 100%;
+	height: 100px;
+	position: fixed;
+	top: 0;
+}
+
+.navbar-wrapper
+{
+	width: 1170px;
+	margin: 0 auto;
+}
+
+.navbar-brand
+{
+	float:left;
+}
+
+.navbar-brand>a
+{
+	margin-top: 10px;
+	display: block;
+	height: 84px;
+	width: 84px;
+	background-image: url("../img/logo.png");
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+.navbar-links
+{
+	float: right;
+}
+
+.navbar-links>a
+{
+	float: left;
+	display: block;
+	text-decoration: none;
+	font-weight: 400;
+	color: #eeeeee;
+	padding: 37px 30px;
+}
+
+.navbar-links>a:hover
+{
+	color: #b9a3dc;
+}

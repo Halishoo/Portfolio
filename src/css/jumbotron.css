@@ -1,0 +1,20 @@
+.jumbotron
+{
+	width: 100%;
+	height: 100%;
+
+	background-image: url("../img/jumbotron.jpg");
+	background-size: cover;
+	text-align: center;
+	float:left;
+
+}
+
+.jumbotron h1
+{
+	color: #eeeeee;
+	font-weight: 300;
+	font-size: 46px;
+	margin-top: 300px;
+	vertical-align: middle;
+}

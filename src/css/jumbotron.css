@@ -2,19 +2,46 @@
 {
 	width: 100%;
 	height: 100%;
-
 	background-image: url("../img/jumbotron.jpg");
 	background-size: cover;
 	text-align: center;
 	float:left;
+	color: #fff;
 
 }
 
 .jumbotron h1
 {
+	font-family: "Oswald";
 	color: #eeeeee;
 	font-weight: 300;
 	font-size: 46px;
 	margin-top: 300px;
 	vertical-align: middle;
+}
+
+.jumbotron p
+{
+	font-size: 18px;
+	margin-top: 1em;
+}
+
+.jumbotron-button
+{
+	border: 2px solid #fff;
+	padding: 10px;
+	display: block;
+	min-width: 100px;
+	width: intrinsic;
+	font-family: "Oswald";
+	font-size: 22px;
+	font-weight: 300;
+	margin: 3em auto;
+}
+
+
+.jumbotron-button:hover
+{
+	border-color: #b9a3dc;
+	color: #b9a3dc;
 }

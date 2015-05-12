@@ -1,0 +1,42 @@
+.row
+{
+	float:left;
+	margin-left: -15px;
+	margin-right: -15px;
+	width: 100%;
+}
+
+[class*="column-"]
+{
+	padding-left: 15px;
+	padding-right: 15px;
+	float:left;
+}
+
+.column-full
+{
+	width: 100%;
+}
+
+.column-half
+{
+	width: 50%;
+
+}
+
+.column-third
+{
+	width: 33.33333%;
+
+}
+
+.column-quarter
+{
+	width: 25%;
+	
+}
+
+[class*="column-"].center
+{
+	text-align: center;
+}

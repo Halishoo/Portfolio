@@ -6,6 +6,8 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
 	<link href="css/font-awesome.min.css" rel="stylesheet">
 	<link href="css/reset.css" rel="stylesheet">
 	<link href="css/grid.css" rel="stylesheet">
@@ -14,57 +16,111 @@
 	<link href="css/jumbotron.css" rel="stylesheet">	
 	<link href="css/container.css" rel="stylesheet">
 	<link href="css/works.css" rel="stylesheet">
-	<title>Untitled</title>
+	<link href="contact.css" rel="stylesheet" type="text/css">
+	<title>Linh Vu</title>
+    
+
+<script>
+(function() // Code in a function to create an isolate scope
+{
+var speed = 500;
+var moving_frequency = 15; // Affects performance !
+var links = document.getElementsByTagName('a');
+var href;
+for(var i=0; i<links.length; i++)
+{   
+    href = (links[i].attributes.href === undefined) ? null : links[i].attributes.href.nodeValue.toString();
+    if(href !== null && href.length > 1 && href.substr(0, 1) == '#')
+    {
+        links[i].onclick = function()
+        {
+            var element;
+            var href = this.attributes.href.nodeValue.toString();
+            if(element = document.getElementById(href.substr(1)))
+            {
+                var hop_count = speed/moving_frequency
+                var getScrollTopDocumentAtBegin = getScrollTopDocument();
+                var gap = (getScrollTopElement(element) - getScrollTopDocumentAtBegin) / hop_count;
+
+                for(var i = 1; i <= hop_count; i++)
+                {
+                    (function()
+                    {
+                        var hop_top_position = gap*i;
+                        setTimeout(function(){  window.scrollTo(0, hop_top_position + getScrollTopDocumentAtBegin); }, moving_frequency*i);
+                    })();
+                }
+            }
+
+            return false;
+        };
+    }
+}
+
+var getScrollTopElement =  function (e)
+{
+    var top = 0;
+
+    while (e.offsetParent != undefined && e.offsetParent != null)
+    {
+        top += e.offsetTop + (e.clientTop != null ? e.clientTop : 0);
+        e = e.offsetParent;
+    }
+
+    return top;
+};
+
+var getScrollTopDocument = function()
+{
+    return document.documentElement.scrollTop + document.body.scrollTop;
+};
+})();
+</script>
+   
 </head>
 <body>
 	<div class="navbar">
 		<div class="navbar-wrapper">
 			<div class="navbar-brand">
-				<a href="a"></a>
+			  <a href="a"></a>
 			</div>
 			<div class="navbar-links">
-				<a href="#">ETUSIVU</a>
-				<a href="#">TIETOA MINUSTA</a>
-				<a href="#">TYÖT</a>
-				<a href="#">YHTEYSTIEDOT</a>
+              <a href="#front-page">ETUSIVU</a>
+			  <a href="#me">TIETOA MINUSTA</a>
+			  <a href="#works">TYÖT</a>
+			  <a href="#contact">YHTEYSTIEDOT</a>
 			</div>
-		</div>
+	  </div>
 	</div>
+    <a name="front-page">
 	<div class="jumbotron">
-		<h1>SUHTEELLISEN EBIN OTSIKKO</h1>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-		<div class="jumbotron-button">DOLOR LOREM</div>
+	  <h1>MINUN PORTFOLIONI</h1>
+	  <p>Luovia ratkaisuja
+painoon ja nettiin</p>
+		<div class="jumbotron-button">KATSO TÄSTÄ TÖITÄNI</div>
 	</div>
+    <a name="me">
 	<div class="container">
 		<div class="container-wrapper">
 			<div class="container-header">
+             
 				<h1>TIETOA MINUSTA</h1>
 			</div>
 			<div class="row">
 				<div class="column-third">
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-					</p><p>consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					<div class="profile-img" style="background-image: url('img/Linh_kolmio.png'); background-size: contain; position: static; margin-left: 60px;"></div>
+                    
 				</div>
 				<div class="column-third">
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-					</p><p>consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					<p>Olen Linh Vu, 20-vuotias graafinen suunnittelija Porvoosta. Teen monipuolista graafista suunnittelua yritysilmeistä nettisivuihin. Toteutan projektit joustavasti ja tehokkaasti. Tavoitteeni projekteissa on tehdä töitä, jotka toimivat ja huomataan. Erityisesti painotyöt ovat lähellä sydäntäni.
+					</p>
 					
 				</div>
 				<div class="column-third">
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					<p>Looorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-					</p><p>consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					</p>
 					
 				</div>
 			</div>
@@ -76,93 +132,140 @@
 				<h1>MITÄ MINÄ TEEN</h1>
 			</div>
 			<div class="row">
+            
 				<div class="column-third center">
-					<p><i class="fa fa-circle-thin"></i></p>
+					<p><i class="fa fa-print"></i></p>
 					<p><h2>PRINT</h2></p>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+					<p>Vahvin osaamiseni painottuu erilaisten painotuotteiden suunnitteluun ja toteutukseen, kuten lehtiin, julisteisiin ja flyereihin.  </p>
 				</div>
+                
 				<div class="column-third center">
 					<p><i class="fa fa-laptop"></i></p>
 					<p><h2>WEB</h2></p>
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
 				</div>
+                
 				<div class="column-third center">
 					<p><i class="fa fa-puzzle-piece"></i></p>
 					<p><h2>ILLUSTRATION</h2></p>
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
 				</div>
+                
 			</div>
 		</div>
 		</div>
-	<div class="container">
+        <a name="works">
+<div class="container">
 		<div class="container-wrapper">
 			<div class="container-header">
+            
 				<h1>TYÖT</h1>
 			</div>
 			<div class="row works">
+            
 				<div class="column-quarter">
 					<div class="works-background">
-						<div class="works-image" style="background-image: url('img/placholder1.jpg')"></div>
+						<div class="works-image" style="background-image: url('img/work_2.jpg')"></div>
 						<div class="works-text">ILLUSTRATION</div>
 					</div>
 				</div>
 				<div class="column-quarter">
 					<div class="works-background">
-						<div class="works-image" style="background-image: url('img/placholder2.jpg')"></div>
+						<div class="works-image" style="background-image: url('img/placeholder5.jpg')"></div>
 						<div class="works-text">WEB</div>
 					</div>
 				</div>
+                
 				<div class="column-quarter">
 					<div class="works-background">
-						<div class="works-image" style="background-image: url('img/placholder3.jpg')"></div>
+						<div class="works-image" style="background-image: url('img/work_3.jpg')"></div>
 						<div class="works-text">PRINT</div>
 					</div>
 				</div>
+                
 				<div class="column-quarter">
 					<div class="works-background">
-						<div class="works-image" style="background-image: url('img/placholder4.jpg')"></div>
-						<div class="works-text">WEB</div>
+						<div class="works-image" style="background-image: url('img/work_5.jpg')"></div>
+						<div class="works-text">ILLUSTRATION</div>
 					</div>
 				</div>
+                
 			</div>
 			<div class="row works">
+            
 				<div class="column-quarter">
 					<div class="works-background">
-						<div class="works-image" style="background-image: url('img/placholder4.jpg')"></div>
+						<div class="works-image" style="background-image: url('img/work_1.jpg')"></div>
 						<div class="works-text">ILLUSTRATION</div>
 					</div>
 				</div>
+                
 				<div class="column-quarter">
 					<div class="works-background">
-						<div class="works-image" style="background-image: url('img/placholder1.jpg')"></div>
+						<div class="works-image" style="background-image: url('img/placeholder5.jpg')"></div>
 						<div class="works-text">WEB</div>
 					</div>
 				</div>
+                
 				<div class="column-quarter">
 					<div class="works-background">
-						<div class="works-image" style="background-image: url('img/placholder2.jpg')"></div>
+						<div class="works-image" style="background-image: url('img/work_4.jpg')"></div>
 						<div class="works-text">PRINT</div>
 					</div>
 				</div>
+                
 				<div class="column-quarter">
 					<div class="works-background">
-						<div class="works-image" style="background-image: url('img/placholder3.jpg')"></div>
+						<div class="works-image" style="background-image: url('img/placeholder5.jpg')"></div>
 						<div class="works-text">WEB</div>
+                        <div class="works-button">NÄYTÄ LISÄÄ</div>
 					</div>
 				</div>
+                
 			</div>
 		</div>
 	</div>
-	<div class="container alt">
-		<div class="container-wrapper">
-			<div class="container-header">
+    <a name="contact">
+<div class="contact alt">
+		<div class="contact-wrapper">
+			<div class="contact-header">
 				<h1>OTA YHTEYTTÄ</h1>
-			</div>
+                
+            <div class="column-third center">
+            <p>sdsdfdsfsdfsdfsdfsdfsdfsfds</p>
+            </div>
+            
+            <div class="column-third center">
+                <div class="container-button"> 
+                
+                <i class="fa fa-envelope"></i>
+                SÄHKÖPOSTI linh.vu@taskut.fi
+                <br/>
+                <br/>
+                
+                <i class="fa fa-phone"></i>
+                PUHELINNUMERO 0449864445
+                <br/>
+                <br/>
+                
+                <i class="fa fa-instagram"></i>
+                INSTAGRAM linkkio
+                <br/>
+                <br/>
+                
+                <i class="fa fa-facebook"></i>
+                FACEBOOK Linh Vu
+                </div>
+            </div>
+            
+            <div class="column-third center">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1971.1720022009838!2d25.6645682!3d60.39283689999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4691f42e9464915d%3A0xed1286af9480b7e7!2s06100+Porvoo!5e0!3m2!1sfi!2sfi!4v1437723188840" width="360" height="360" frameborder="0" style="border:0" allowfullscreen></iframe>
+            </div>
+            
 		</div>
 	</div>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+</div>
 </body>
 </html>

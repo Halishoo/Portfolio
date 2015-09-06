@@ -1,1 +1,117 @@
 @charset "UTF-8";
+.contact {
+    width: 100%;
+    float: left;
+    overflow: auto;
+    padding: 50px 0;
+    overflow-y: hidden;
+}
+@media only screen and (max-width: 950px) {
+    .contact {
+        display: none;
+    }
+}
+.contact p {
+    text-align: centre;
+}
+.contact.alt {
+    background: linear-gradient(45deg, #2b2b2b 0%, #2b2b2b 50%, #3c3c3c 50%, #3c3c3c 100%);
+    color: #fff;
+    height: 500px;
+}
+.contact.alt p {
+    color: #fff;
+}
+.contact-wrapper {
+    width: 1170px;
+    margin: 0 auto;
+}
+.contact h1 {
+    font-family: "Oswald";
+    font-weight: 300;
+    color: #333;
+    display: inline;
+}
+.contact h1::after {
+    content: "";
+    width: 40%;
+    border-bottom: 2px solid #333;
+    display: block;
+    position: relative;
+    float: right;
+    top: 0.7em;
+}
+.contact h1::before {
+    content: "";
+    width: 40%;
+    border-top: 2px solid #333;
+    display: block;
+    position: relative;
+    float: left;
+    top: 0.7em;
+}
+.contact.alt h1 {
+    color: #fff;
+}
+.contact.alt h1::before,
+.contact.alt h1::after {
+    border-color: #fff;
+}
+.contact-header {
+    text-align: center;
+    float: left;
+    width: 100%;
+    margin-bottom: 30px;
+}
+.contact h2 {
+    font-family: "Oswald";
+    font-weight: 300;
+}
+.contact .fa {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    margin-right: 9px;
+}
+.contact-box {
+    border: 2px solid #fff;
+    padding: 10px;
+    display: block;
+    min-width: 100px;
+    width: intrinsic;
+    font-family: "Oswald";
+    font-size: 22px;
+    font-weight: 300;
+    margin: 3em auto;
+}
+.contact-form {
+    text-align: left;
+    color: #fff;
+}
+.contact-form label {
+    width: 100%;
+    float: left;
+}
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    float: left;
+    background-color: #fff;
+    color: #2b2b2b;
+    font-family: "Open Sans";
+    padding: 5px;
+    margin: 1px 0 9px 0;
+}
+.contact-form textarea {
+    height: 100px;
+    resize: none;
+    overflow-y: scroll;
+}
+.contact-form input[type=submit] {
+    background-color: #2b2b2b;
+    border: 1px solid #fff;
+    font-family: "Oswald";
+    width: auto;
+    color: #fff;
+    float: right;
+    padding: 5px 15px;
+}

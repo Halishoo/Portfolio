@@ -7,7 +7,8 @@
     /*background-image: url('../img/escheresque_ste.png');*/
     /*background-color: #6D44A8;*/
     
-    background-color: #c62e2e;
+    background-color: 
+	#c62e2e;
     z-index: 2;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
 }

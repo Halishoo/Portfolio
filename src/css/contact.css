@@ -7,8 +7,16 @@
     overflow-y: hidden;
 }
 @media only screen and (max-width: 950px) {
-    .contact {
-        display: none;
+
+    
+    .contact .contact-box
+	{
+		width: 100% !important;
+		display: block;
+	}
+    .contact .column-third.mobile-hidden
+    {
+    	display: none;
     }
 }
 .contact p {
@@ -26,30 +34,7 @@
     width: 1170px;
     margin: 0 auto;
 }
-.contact h1 {
-    font-family: "Oswald";
-    font-weight: 300;
-    color: #333;
-    display: inline;
-}
-.contact h1::after {
-    content: "";
-    width: 40%;
-    border-bottom: 2px solid #333;
-    display: block;
-    position: relative;
-    float: right;
-    top: 0.7em;
-}
-.contact h1::before {
-    content: "";
-    width: 40%;
-    border-top: 2px solid #333;
-    display: block;
-    position: relative;
-    float: left;
-    top: 0.7em;
-}
+
 .contact.alt h1 {
     color: #fff;
 }

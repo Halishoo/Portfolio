@@ -10,6 +10,6 @@ fwrite($myfile, "Viesti: " . $_POST["message"] . "\n");
 
 fclose($myfile);
 
-header("index.html");
+header("Location: index.html");
 
 ?>

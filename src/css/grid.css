@@ -5,7 +5,12 @@
 	margin-right: -15px;
 	width: 100%;
 }
-
+@media only screen and (max-width: 950px)
+{.row
+{
+	margin: 0;
+}
+}
 [class*="column-"]
 {
 	padding-left: 15px;
@@ -27,6 +32,14 @@
 .column-third
 {
 	width: 33.33333%;
+}
+
+@media only screen and (max-width: 950px)
+{
+	.column-third
+	{
+		width: 100%;
+	}
 
 }
 
@@ -35,6 +48,18 @@
 	width: 25%;
 	
 }
+
+@media only screen and (max-width: 950px)
+{
+	.column-quarter
+	{
+		width: 95%;
+		margin: 20px 2.5%;
+		padding: 0;
+	}
+
+}
+
 
 [class*="column-"].center
 {

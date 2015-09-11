@@ -1,8 +1,8 @@
 .works
 {
 	margin-bottom: 35px;
+	overflow-y: hidden;
 }
-
 .works-background
 {
 	height: 250px;
@@ -16,7 +16,13 @@
 	opacity: 0.6;
 	transition: 0.2s ease opacity;
 }
-
+.profile-img
+{
+	height: 200px;
+	background-size: cover;
+	opacity: 1;
+	background-repeat:	no-repeat;
+}
 .works-image:hover
 {
 	opacity: 1;
@@ -25,7 +31,7 @@
 .works-text
 {
 	height: 50px;
-	background-color: #6d45a8;
+	background-color: #c62e2e;
 	color: #fff;
 	font-family: "Oswald";
 	font-weight: 300;
@@ -33,3 +39,26 @@
 	text-align: center;
 	padding-top: 5px;
 }
+
+.works-button
+{
+	border: 1px solid #fff;
+	padding: 10px;
+	display: block;
+	min-width: 100px;
+	width: intrinsic;
+	font-family: "Oswald";
+	font-size: 17px;
+	font-weight: 300;
+	margin: 3em auto;
+	background-color: #313131;
+	color: #fff;
+}
+
+.works-button:hover
+{
+	border-color: #FFFFFF;
+	color: #FFFFFF;
+	background-color: #4A4848;
+}
+
